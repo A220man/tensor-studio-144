@@ -1,0 +1,1 @@
+{"lspServers":{"lua-language-server":{"command":"lua-language-server","args":[],"extensionToLanguage":{".lua":"lua"},"transport":"stdio","initializationOptions":{}}}}
