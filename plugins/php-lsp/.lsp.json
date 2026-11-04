@@ -1,0 +1,1 @@
+{"lspServers":{"php":{"command":"phpactor","args":["language-server"],"extensionToLanguage":{".php":"php"},"transport":"stdio","initializationOptions":{}}}}
