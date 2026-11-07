@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-vue-volar-lsp
+marketplace-validation
 
 ## Roadmap
 
@@ -40,4 +40,15 @@ Acceptance:
 - Plugins provide LSP functionality when installed
 
 Implementation: `plugins/gopls-lsp/.lsp.json`, `plugins/gopls-lsp/README.md`, `plugins/rust-analyzer-lsp/.lsp.json`, `plugins/rust-analyzer-lsp/README.md`, `plugins/clangd-lsp/.lsp.json`, `plugins/clangd-lsp/README.md`, `plugins/php-lsp/.lsp.json`, `plugins/php-lsp/README.md`, `plugins/swift-lsp/.lsp.json`, `plugins/swift-lsp/README.md`, `plugins/kotlin-lsp/.lsp.json`, `plugins/kotlin-lsp/README.md`, `plugins/csharp-lsp/.lsp.json`, `plugins/csharp-lsp/README.md`, `plugins/jdtls-lsp/.lsp.json`, `plugins/jdtls-lsp/README.md`, `plugins/lua-lsp/.lsp.json`, `plugins/lua-lsp/README.md`, `marketplace.json`
+
+### marketplace-validation — Add marketplace schema validation script
+
+Status: in_progress
+
+Acceptance:
+- Script validates marketplace.json against JSON schema
+- Script reports validation errors with line numbers
+- Script can be run as part of CI
+
+Implementation: `scripts/validate-marketplace.py`, `schemas/marketplace-schema.json`
 
