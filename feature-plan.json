@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "vue-volar-lsp",
+  "current_feature": "marketplace-validation",
   "features": [
     {
       "id": "marketplace-skeleton",
@@ -64,6 +64,21 @@
         "plugins/lua-lsp/.lsp.json",
         "plugins/lua-lsp/README.md",
         "marketplace.json"
+      ],
+      "tests": []
+    },
+    {
+      "id": "marketplace-validation",
+      "title": "Add marketplace schema validation script",
+      "status": "in_progress",
+      "acceptance": [
+        "Script validates marketplace.json against JSON schema",
+        "Script reports validation errors with line numbers",
+        "Script can be run as part of CI"
+      ],
+      "implementation": [
+        "scripts/validate-marketplace.py",
+        "schemas/marketplace-schema.json"
       ],
       "tests": []
     }

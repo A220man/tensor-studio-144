@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claude Plugins Official Marketplace Schema",
+  "type": "object",
+  "required": ["schemaVersion", "name", "displayName", "description", "plugins"],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "displayName", "description", "source", "lspServers", "strict"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^plugins/[a-z0-9-]+$"
+          },
+          "lspServers": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "type": "object",
+              "required": ["command", "args", "extensionToLanguage", "transport", "initializationOptions"],
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "args": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "extensionToLanguage": {
+                  "type": "object",
+                  "minProperties": 1,
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "transport": {
+                  "type": "string",
+                  "enum": ["stdio", "sse"]
+                },
+                "initializationOptions": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "strict": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
