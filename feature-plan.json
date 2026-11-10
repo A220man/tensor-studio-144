@@ -1,85 +1,15 @@
 {
   "schema_version": 1,
-  "current_feature": "marketplace-validation",
+  "current_feature": "continue-implementation",
   "features": [
     {
-      "id": "marketplace-skeleton",
-      "title": "Marketplace skeleton with plugin directory structure",
-      "status": "done",
-      "acceptance": [
-        "Repository has plugins/ directory with at least one example plugin",
-        "marketplace.json exists with valid schema",
-        "README.md documents the marketplace structure"
-      ],
-      "implementation": [
-        "plugins/typescript-lsp/.lsp.json",
-        "plugins/typescript-lsp/README.md",
-        "marketplace.json",
-        "README.md"
-      ],
-      "tests": []
-    },
-    {
-      "id": "vue-volar-lsp",
-      "title": "Add Vue/Volar LSP plugin",
-      "status": "done",
-      "acceptance": [
-        "plugins/vue-volar-lsp/.lsp.json exists with Volar configuration",
-        "marketplace.json includes vue-volar-lsp entry",
-        "Plugin installs and provides LSP for .vue files"
-      ],
-      "implementation": [
-        "plugins/vue-volar-lsp/.lsp.json",
-        "plugins/vue-volar-lsp/README.md",
-        "marketplace.json"
-      ],
-      "tests": []
-    },
-    {
-      "id": "lsp-json-fix",
-      "title": "Fix missing .lsp.json for existing LSP plugins",
-      "status": "done",
-      "acceptance": [
-        "All 11 existing LSP plugins have .lsp.json files",
-        "marketplace.json lspServers configs match .lsp.json files",
-        "Plugins provide LSP functionality when installed"
-      ],
-      "implementation": [
-        "plugins/gopls-lsp/.lsp.json",
-        "plugins/gopls-lsp/README.md",
-        "plugins/rust-analyzer-lsp/.lsp.json",
-        "plugins/rust-analyzer-lsp/README.md",
-        "plugins/clangd-lsp/.lsp.json",
-        "plugins/clangd-lsp/README.md",
-        "plugins/php-lsp/.lsp.json",
-        "plugins/php-lsp/README.md",
-        "plugins/swift-lsp/.lsp.json",
-        "plugins/swift-lsp/README.md",
-        "plugins/kotlin-lsp/.lsp.json",
-        "plugins/kotlin-lsp/README.md",
-        "plugins/csharp-lsp/.lsp.json",
-        "plugins/csharp-lsp/README.md",
-        "plugins/jdtls-lsp/.lsp.json",
-        "plugins/jdtls-lsp/README.md",
-        "plugins/lua-lsp/.lsp.json",
-        "plugins/lua-lsp/README.md",
-        "marketplace.json"
-      ],
-      "tests": []
-    },
-    {
-      "id": "marketplace-validation",
-      "title": "Add marketplace schema validation script",
+      "id": "continue-implementation",
+      "title": "Continue implementation and resolve known failures",
       "status": "in_progress",
       "acceptance": [
-        "Script validates marketplace.json against JSON schema",
-        "Script reports validation errors with line numbers",
-        "Script can be run as part of CI"
+        "Run checks, fix failures, and implement the next planned feature"
       ],
-      "implementation": [
-        "scripts/validate-marketplace.py",
-        "schemas/marketplace-schema.json"
-      ],
+      "implementation": [],
       "tests": []
     }
   ]
