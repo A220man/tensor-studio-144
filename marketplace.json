@@ -12,7 +12,9 @@
       "lspServers": {
         "typescript": {
           "command": "typescript-language-server",
-          "args": ["--stdio"],
+          "args": [
+            "--stdio"
+          ],
           "extensionToLanguage": {
             ".ts": "typescript",
             ".tsx": "typescript",
@@ -28,8 +30,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "vue-volar-lsp",
       "displayName": "Vue/Volar LSP",
@@ -38,7 +39,9 @@
       "lspServers": {
         "vue": {
           "command": "vue-language-server",
-          "args": ["--stdio"],
+          "args": [
+            "--stdio"
+          ],
           "extensionToLanguage": {
             ".vue": "vue"
           },
@@ -51,8 +54,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "pyright-lsp",
       "displayName": "Pyright LSP",
@@ -61,7 +63,9 @@
       "lspServers": {
         "pyright": {
           "command": "pyright-langserver",
-          "args": ["--stdio"],
+          "args": [
+            "--stdio"
+          ],
           "extensionToLanguage": {
             ".py": "python"
           },
@@ -70,8 +74,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "gopls-lsp",
       "displayName": "gopls LSP",
@@ -80,7 +83,9 @@
       "lspServers": {
         "gopls": {
           "command": "gopls",
-          "args": ["serve"],
+          "args": [
+            "serve"
+          ],
           "extensionToLanguage": {
             ".go": "go"
           },
@@ -89,8 +94,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "rust-analyzer-lsp",
       "displayName": "Rust Analyzer LSP",
@@ -108,8 +112,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "clangd-lsp",
       "displayName": "Clangd LSP",
@@ -132,8 +135,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "php-lsp",
       "displayName": "PHP LSP",
@@ -142,7 +144,9 @@
       "lspServers": {
         "php": {
           "command": "phpactor",
-          "args": ["language-server"],
+          "args": [
+            "language-server"
+          ],
           "extensionToLanguage": {
             ".php": "php"
           },
@@ -151,8 +155,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "swift-lsp",
       "displayName": "Swift LSP",
@@ -170,8 +173,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "kotlin-lsp",
       "displayName": "Kotlin LSP",
@@ -190,8 +192,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "csharp-lsp",
       "displayName": "C# LSP",
@@ -209,8 +210,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "jdtls-lsp",
       "displayName": "JDTLS LSP",
@@ -228,8 +228,7 @@
         }
       },
       "strict": false
-    }
-    ,
+    },
     {
       "name": "lua-lsp",
       "displayName": "Lua LSP",
@@ -244,6 +243,52 @@
           },
           "transport": "stdio",
           "initializationOptions": {}
+        }
+      },
+      "strict": false
+    },
+    {
+      "name": "github",
+      "displayName": "GitHub MCP",
+      "description": "GitHub MCP server support for Claude Code with OAuth and PAT fallback",
+      "source": "plugins/github",
+      "lspServers": {
+        "github": {
+          "command": "mcp",
+          "args": [
+            "github"
+          ],
+          "extensionToLanguage": {
+            ".github": "github"
+          },
+          "transport": "stdio",
+          "initializationOptions": {
+            "auth": "oauth",
+            "fallbackToPAT": true
+          }
+        }
+      },
+      "strict": false
+    },
+    {
+      "name": "github",
+      "displayName": "GitHub MCP",
+      "description": "GitHub MCP server support for Claude Code with OAuth and PAT fallback",
+      "source": "plugins/github",
+      "lspServers": {
+        "github": {
+          "command": "mcp",
+          "args": [
+            "github"
+          ],
+          "extensionToLanguage": {
+            ".github": "github"
+          },
+          "transport": "stdio",
+          "initializationOptions": {
+            "auth": "oauth",
+            "fallbackToPAT": true
+          }
         }
       },
       "strict": false

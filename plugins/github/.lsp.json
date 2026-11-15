@@ -1,0 +1,18 @@
+{
+  "lspServers": {
+    "github": {
+      "command": "mcp",
+      "args": [
+        "github"
+      ],
+      "extensionToLanguage": {
+        ".github": "github"
+      },
+      "transport": "stdio",
+      "initializationOptions": {
+        "auth": "oauth",
+        "fallbackToPAT": true
+      }
+    }
+  }
+}
