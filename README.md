@@ -1,5 +1,7 @@
 # Claude Plugins Official Marketplace — Ryan Vo
 
+Current version: `1.3.0`.
+
 > Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
 
 
@@ -100,3 +102,4 @@ The `marketplace.json` follows this schema:
 Apache-2.0
 
 Maintainer: Ryan Vo <ryandtvo@gmail.com>
+| `github` | GitHub MCP server support for Claude Code with OAuth and PAT fallback | `mcp` |

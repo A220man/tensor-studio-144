@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "name": "claude-plugins-official",
+  "displayName": "Claude Plugins Official",
+  "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+  "plugins": [
+    {
+      "name": "typescript-lsp",
+      "displayName": "TypeScript LSP",
+      "description": "TypeScript/JavaScript language server support via typescript-language-server",
+      "source": "plugins/typescript-lsp",
+      "lspServers": {
+        "typescript": {
+          "command": "typescript-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".ts": "typescript",
+            ".tsx": "typescript",
+            ".js": "javascript",
+            ".jsx": "javascript",
+            ".mjs": "javascript",
+            ".cjs": "javascript"
+          },
+          "transport": "stdio",
+          "initializationOptions": {
+            "hostInfo": "claude-plugins-official"
+          }
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "vue-volar-lsp",
+      "displayName": "Vue/Volar LSP",
+      "description": "Vue.js language server support via Volar (@vue/language-server)",
+      "source": "plugins/vue-volar-lsp",
+      "lspServers": {
+        "vue": {
+          "command": "vue-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".vue": "vue"
+          },
+          "transport": "stdio",
+          "initializationOptions": {
+            "typescript": {
+              "tsdk": "node_modules/typescript/lib"
+            }
+          }
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "pyright-lsp",
+      "displayName": "Pyright LSP",
+      "description": "Python language server support via pyright",
+      "source": "plugins/pyright-lsp",
+      "lspServers": {
+        "pyright": {
+          "command": "pyright-langserver",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".py": "python"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "gopls-lsp",
+      "displayName": "gopls LSP",
+      "description": "Go language server support via gopls",
+      "source": "plugins/gopls-lsp",
+      "lspServers": {
+        "gopls": {
+          "command": "gopls",
+          "args": ["serve"],
+          "extensionToLanguage": {
+            ".go": "go"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "rust-analyzer-lsp",
+      "displayName": "Rust Analyzer LSP",
+      "description": "Rust language server support via rust-analyzer",
+      "source": "plugins/rust-analyzer-lsp",
+      "lspServers": {
+        "rust-analyzer": {
+          "command": "rust-analyzer",
+          "args": [],
+          "extensionToLanguage": {
+            ".rs": "rust"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "clangd-lsp",
+      "displayName": "Clangd LSP",
+      "description": "C/C++ language server support via clangd",
+      "source": "plugins/clangd-lsp",
+      "lspServers": {
+        "clangd": {
+          "command": "clangd",
+          "args": [],
+          "extensionToLanguage": {
+            ".c": "cpp",
+            ".cc": "cpp",
+            ".cpp": "cpp",
+            ".cxx": "cpp",
+            ".h": "cpp",
+            ".hpp": "cpp"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "php-lsp",
+      "displayName": "PHP LSP",
+      "description": "PHP language server support via phpactor",
+      "source": "plugins/php-lsp",
+      "lspServers": {
+        "php": {
+          "command": "phpactor",
+          "args": ["language-server"],
+          "extensionToLanguage": {
+            ".php": "php"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "swift-lsp",
+      "displayName": "Swift LSP",
+      "description": "Swift language server support via sourcekit-lsp",
+      "source": "plugins/swift-lsp",
+      "lspServers": {
+        "sourcekit-lsp": {
+          "command": "sourcekit-lsp",
+          "args": [],
+          "extensionToLanguage": {
+            ".swift": "swift"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "kotlin-lsp",
+      "displayName": "Kotlin LSP",
+      "description": "Kotlin language server support via kotlin-language-server",
+      "source": "plugins/kotlin-lsp",
+      "lspServers": {
+        "kotlin-language-server": {
+          "command": "kotlin-language-server",
+          "args": [],
+          "extensionToLanguage": {
+            ".kt": "kotlin",
+            ".kts": "kotlin"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "csharp-lsp",
+      "displayName": "C# LSP",
+      "description": "C# language server support via csharp-lsp (OmniSharp)",
+      "source": "plugins/csharp-lsp",
+      "lspServers": {
+        "csharp-lsp": {
+          "command": "csharp-lsp",
+          "args": [],
+          "extensionToLanguage": {
+            ".cs": "csharp"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "jdtls-lsp",
+      "displayName": "JDTLS LSP",
+      "description": "Java language server support via jdtls (Eclipse JDT Language Server)",
+      "source": "plugins/jdtls-lsp",
+      "lspServers": {
+        "jdtls": {
+          "command": "jdtls",
+          "args": [],
+          "extensionToLanguage": {
+            ".java": "java"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+    ,
+    {
+      "name": "lua-lsp",
+      "displayName": "Lua LSP",
+      "description": "Lua language server support via lua-language-server",
+      "source": "plugins/lua-lsp",
+      "lspServers": {
+        "lua-language-server": {
+          "command": "lua-language-server",
+          "args": [],
+          "extensionToLanguage": {
+            ".lua": "lua"
+          },
+          "transport": "stdio",
+          "initializationOptions": {}
+        }
+      },
+      "strict": false
+    }
+  ]
+}
