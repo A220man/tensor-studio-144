@@ -269,29 +269,6 @@
         }
       },
       "strict": false
-    },
-    {
-      "name": "github",
-      "displayName": "GitHub MCP",
-      "description": "GitHub MCP server support for Claude Code with OAuth and PAT fallback",
-      "source": "plugins/github",
-      "lspServers": {
-        "github": {
-          "command": "mcp",
-          "args": [
-            "github"
-          ],
-          "extensionToLanguage": {
-            ".github": "github"
-          },
-          "transport": "stdio",
-          "initializationOptions": {
-            "auth": "oauth",
-            "fallbackToPAT": true
-          }
-        }
-      },
-      "strict": false
     }
   ]
 }
