@@ -26,10 +26,10 @@ def validate_marketplace():
     if marketplace.get("schemaVersion") != 1:
         errors.append(f"Expected schemaVersion 1, got {marketplace.get('schemaVersion')}")
 
-    # Get plugin directories
+    # Get plugin directories (all directories, not just -lsp)
     plugin_dirs = [
         d for d in os.listdir(plugins_dir)
-        if os.path.isdir(os.path.join(plugins_dir, d)) and d.endswith("-lsp")
+        if os.path.isdir(os.path.join(plugins_dir, d))
     ]
 
     marketplace_plugins = {p["name"]: p for p in marketplace.get("plugins", [])}
